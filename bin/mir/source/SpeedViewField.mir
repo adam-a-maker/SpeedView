@@ -1,0 +1,446 @@
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Math,4,14,18]; ]
+import Toybox.Math;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Attention,5,14,23]; ]
+import Toybox.Attention;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 7; @symbol_classdef = [SpeedViewField,7,6,20]; @symbol_extends<0> = [WatchUi,7,29,36]; @symbol_extends<1> = [DataField,7,37,46]; ]
+class SpeedViewField extends WatchUi.DataField {
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 9; @position = 16; @symbol_vardef = [curSpeed,9,16,24]; ]
+    private
+    var curSpeed = 0.0;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 10; @position = 16; @symbol_vardef = [maxSpeed,10,16,24]; ]
+    private
+    var maxSpeed = 0.0;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 11; @position = 16; @symbol_vardef = [v1,11,16,18]; ]
+    private
+    var v1 = 20.0;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 12; @position = 16; @symbol_vardef = [v2,12,16,18]; ]
+    private
+    var v2 = 45.0;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 13; @position = 16; @symbol_vardef = [v3,13,16,18]; ]
+    private
+    var v3 = 70.0;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 15; @symbol_functiondef = [initialize,15,13,23]; ]
+    function initialize() as Void {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_15_26_17_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 16 8 ]
+        symbol [ DataField %tmp.2 16 8 17 ];
+        %tmp.2 = getv ? :DataField;
+        symbol [ initialize %tmp.3 16 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_15_26_17_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 19; @symbol_functiondef = [compute,19,13,20]; @symbol_param<0> = [info,19,21,25]; ]
+    function compute(info) {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_19_27_29_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 20 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_8_28_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 20 12 16 ];
+        symbol [ currentSpeed %tmp.2 20 17 29 ];
+        %tmp.2 = getv %tmp.1 :currentSpeed;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_8_28_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_8_28_8_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_39_28_8_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 21 12 ]
+        %tmp.5 = lgetv %info;
+        symbol [ info %tmp.5 21 23 27 ];
+        symbol [ currentSpeed %tmp.6 21 28 40 ];
+        %tmp.6 = getv %tmp.5 :currentSpeed;
+        %tmp.7 = 3.6;
+        %tmp.8 = mul %tmp.6 %tmp.7;
+        symbol [ curSpeed ? 21 12 20 ];
+        putv self :curSpeed %tmp.8;
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 22 12 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_12_27_12_if_stmt:
+        symbol [ curSpeed %tmp.10 22 16 24 ];
+        %tmp.10 = getv ? :curSpeed;
+        symbol [ maxSpeed %tmp.12 22 27 35 ];
+        %tmp.12 = getv ? :maxSpeed;
+        %tmp.13 = gt %tmp.10 %tmp.12;
+        bf %tmp.13 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_12_27_12_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_12_27_12_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_37_27_12_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 23 16 ]
+        symbol [ curSpeed %tmp.15 23 27 35 ];
+        %tmp.15 = getv ? :curSpeed;
+        symbol [ maxSpeed ? 23 16 24 ];
+        putv self :maxSpeed %tmp.15;
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 24 16 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_16_26_16_if_stmt:
+        symbol [ Attention %tmp.16 24 20 29 ];
+        %tmp.16 = getm $.Toybox.Attention;
+        %tmp.18 = const :vibrate;
+        symbol [ vibrate %tmp.18 24 35 42 const ];
+        %tmp.19 = canhazplz %tmp.16 %tmp.18;
+        bf %tmp.19 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_16_26_16_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_16_26_16_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_44_26_16_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 25 20 ]
+        symbol [ Attention %tmp.20 25 20 29 ];
+        %tmp.20 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.21 25 30 37 ];
+        %tmp.21 = getv function %tmp.20 :vibrate;
+        %tmp.22 = newa 1;
+        symbol [ Attention %tmp.25 25 43 52 ];
+        %tmp.25 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.26 25 53 64 ];
+        %tmp.26 = getv function ? %tmp.25 :VibeProfile;
+        %tmp.27 = 100;
+        %tmp.28 = 100;
+        %tmp.23 = newc %tmp.26 (%tmp.27, %tmp.28);
+        %tmp.29 = dup %tmp.22;
+        %tmp.30 = aputv %tmp.29 0 %tmp.23;
+        invoke %tmp.20 %tmp.21(%tmp.30);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_44_26_16_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_16_26_16_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_24_16_26_16_if_end:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_37_27_12_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_12_27_12_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_22_12_27_12_if_end:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_39_28_8_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_8_28_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_20_8_28_8_if_end:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_19_27_29_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 31; @symbol_functiondef = [onUpdate,31,13,21]; @symbol_param<0> = [dc,31,22,24]; ]
+    function onUpdate(dc) {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 32 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 32 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 32 16 18 ];
+        symbol [ getWidth %tmp.2 32 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 32 12 13 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 33 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 33 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 33 16 18 ];
+        symbol [ getHeight %tmp.5 33 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 33 12 13 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 35 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_stop" ]
+        %colorTop.3 = local;
+        symbol [ colorTop %colorTop.3 35 12 20 ];
+        %tmp.7 = self;
+        symbol [ getSpeedColor %tmp.8 35 26 39 ];
+        %tmp.8 = getv function %tmp.7 :getSpeedColor;
+        symbol [ curSpeed %tmp.10 35 40 48 ];
+        %tmp.10 = getv ? :curSpeed;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        lputv %colorTop.3 %tmp.11;
+        symbol [ colorTop %colorTop.3 35 12 20 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 36 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_stop" ]
+        %colorBottom.4 = local;
+        symbol [ colorBottom %colorBottom.4 36 12 23 ];
+        %tmp.12 = self;
+        symbol [ getSpeedColor %tmp.13 36 26 39 ];
+        %tmp.13 = getv function %tmp.12 :getSpeedColor;
+        symbol [ maxSpeed %tmp.15 36 40 48 ];
+        %tmp.15 = getv ? :maxSpeed;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        lputv %colorBottom.4 %tmp.16;
+        symbol [ colorBottom %colorBottom.4 36 12 23 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 38 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 38 8 10 ];
+        symbol [ setColor %tmp.18 38 11 19 ];
+        %tmp.18 = getv function %tmp.17 :setColor;
+        %tmp.19 = lgetv %colorTop.3;
+        symbol [ colorTop %tmp.19 38 20 28 ];
+        %tmp.20 = lgetv %colorTop.3;
+        symbol [ colorTop %tmp.20 38 30 38 ];
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 39 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 39 8 10 ];
+        symbol [ fillRectangle %tmp.22 39 11 24 ];
+        %tmp.22 = getv function %tmp.21 :fillRectangle;
+        %tmp.23 = 0;
+        %tmp.24 = 0;
+        %tmp.25 = lgetv %w.1;
+        symbol [ w %tmp.25 39 31 32 ];
+        %tmp.26 = lgetv %h.2;
+        symbol [ h %tmp.26 39 34 35 ];
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25, %tmp.28);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 41 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 41 8 10 ];
+        symbol [ setColor %tmp.30 41 11 19 ];
+        %tmp.30 = getv function %tmp.29 :setColor;
+        %tmp.31 = lgetv %colorBottom.4;
+        symbol [ colorBottom %tmp.31 41 20 31 ];
+        %tmp.32 = lgetv %colorBottom.4;
+        symbol [ colorBottom %tmp.32 41 33 44 ];
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 42 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 42 8 10 ];
+        symbol [ fillRectangle %tmp.34 42 11 24 ];
+        %tmp.34 = getv function %tmp.33 :fillRectangle;
+        %tmp.35 = 0;
+        %tmp.36 = lgetv %h.2;
+        symbol [ h %tmp.36 42 28 29 ];
+        %tmp.37 = 2;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        %tmp.39 = lgetv %w.1;
+        symbol [ w %tmp.39 42 35 36 ];
+        %tmp.40 = lgetv %h.2;
+        symbol [ h %tmp.40 42 38 39 ];
+        %tmp.41 = 2;
+        %tmp.42 = div %tmp.40 %tmp.41;
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.38, %tmp.39, %tmp.42);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 44 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 44 8 10 ];
+        symbol [ setColor %tmp.44 44 11 19 ];
+        %tmp.44 = getv function %tmp.43 :setColor;
+        symbol [ Graphics %tmp.45 44 20 28 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.46 44 29 40 ];
+        %tmp.46 = getv %tmp.45 :COLOR_BLACK;
+        symbol [ Graphics %tmp.47 44 42 50 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.48 44 51 68 ];
+        %tmp.48 = getv %tmp.47 :COLOR_TRANSPARENT;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 45 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 45 8 10 ];
+        symbol [ setPenWidth %tmp.50 45 11 22 ];
+        %tmp.50 = getv function %tmp.49 :setPenWidth;
+        %tmp.51 = 2;
+        invoke %tmp.49 %tmp.50(%tmp.51);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 46 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 46 8 10 ];
+        symbol [ drawLine %tmp.53 46 11 19 ];
+        %tmp.53 = getv function %tmp.52 :drawLine;
+        %tmp.54 = 0;
+        %tmp.55 = lgetv %h.2;
+        symbol [ h %tmp.55 46 23 24 ];
+        %tmp.56 = 2;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        %tmp.58 = lgetv %w.1;
+        symbol [ w %tmp.58 46 30 31 ];
+        %tmp.59 = lgetv %h.2;
+        symbol [ h %tmp.59 46 33 34 ];
+        %tmp.60 = 2;
+        %tmp.61 = div %tmp.59 %tmp.60;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.57, %tmp.58, %tmp.61);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 48 8 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 48 8 10 ];
+        symbol [ setColor %tmp.63 48 11 19 ];
+        %tmp.63 = getv function %tmp.62 :setColor;
+        symbol [ Graphics %tmp.64 48 20 28 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.65 48 29 40 ];
+        %tmp.65 = getv %tmp.64 :COLOR_BLACK;
+        symbol [ Graphics %tmp.66 48 42 50 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.67 48 51 68 ];
+        %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+        invoke %tmp.62 %tmp.63(%tmp.65, %tmp.67);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 50 8 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 50 8 10 ];
+        symbol [ drawText %tmp.69 50 11 19 ];
+        %tmp.69 = getv function %tmp.68 :drawText;
+        %tmp.70 = lgetv %w.1;
+        symbol [ w %tmp.70 50 20 21 ];
+        %tmp.71 = 2;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        %tmp.73 = lgetv %h.2;
+        symbol [ h %tmp.73 50 27 28 ];
+        %tmp.74 = 0.02;
+        %tmp.75 = mul %tmp.73 %tmp.74;
+        symbol [ Graphics %tmp.76 50 37 45 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_THAI_HOT %tmp.77 50 46 66 ];
+        %tmp.77 = getv %tmp.76 :FONT_NUMBER_THAI_HOT;
+        symbol [ curSpeed %tmp.79 50 68 76 ];
+        %tmp.79 = getv ? :curSpeed;
+        symbol [ format %tmp.80 50 77 83 ];
+        %tmp.80 = getv function %tmp.79 :format;
+        %tmp.81 = "%.0f";
+        %tmp.82 = invoke %tmp.79 %tmp.80(%tmp.81);
+        symbol [ Graphics %tmp.83 50 93 101 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.84 50 102 121 ];
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.68 %tmp.69(%tmp.72, %tmp.75, %tmp.77, %tmp.82, %tmp.84);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 51 8 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 51 8 10 ];
+        symbol [ drawText %tmp.86 51 11 19 ];
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.87 = lgetv %w.1;
+        symbol [ w %tmp.87 51 20 21 ];
+        %tmp.88 = 2;
+        %tmp.89 = div %tmp.87 %tmp.88;
+        %tmp.90 = lgetv %h.2;
+        symbol [ h %tmp.90 51 27 28 ];
+        %tmp.91 = 0.38;
+        %tmp.92 = mul %tmp.90 %tmp.91;
+        symbol [ Graphics %tmp.93 51 37 45 ];
+        %tmp.93 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.94 51 46 56 ];
+        %tmp.94 = getv %tmp.93 :FONT_XTINY;
+        %tmp.95 = "INSTANT SPEED";
+        symbol [ Graphics %tmp.96 51 75 83 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.97 51 84 103 ];
+        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.85 %tmp.86(%tmp.89, %tmp.92, %tmp.94, %tmp.95, %tmp.97);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 53 8 ]
+        %tmp.98 = lgetv %dc;
+        symbol [ dc %tmp.98 53 8 10 ];
+        symbol [ drawText %tmp.99 53 11 19 ];
+        %tmp.99 = getv function %tmp.98 :drawText;
+        %tmp.100 = lgetv %w.1;
+        symbol [ w %tmp.100 53 20 21 ];
+        %tmp.101 = 2;
+        %tmp.102 = div %tmp.100 %tmp.101;
+        %tmp.103 = lgetv %h.2;
+        symbol [ h %tmp.103 53 27 28 ];
+        %tmp.104 = 0.45;
+        %tmp.105 = mul %tmp.103 %tmp.104;
+        symbol [ Graphics %tmp.106 53 37 45 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_THAI_HOT %tmp.107 53 46 66 ];
+        %tmp.107 = getv %tmp.106 :FONT_NUMBER_THAI_HOT;
+        symbol [ maxSpeed %tmp.109 53 68 76 ];
+        %tmp.109 = getv ? :maxSpeed;
+        symbol [ format %tmp.110 53 77 83 ];
+        %tmp.110 = getv function %tmp.109 :format;
+        %tmp.111 = "%.0f";
+        %tmp.112 = invoke %tmp.109 %tmp.110(%tmp.111);
+        symbol [ Graphics %tmp.113 53 93 101 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 53 102 121 ];
+        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.98 %tmp.99(%tmp.102, %tmp.105, %tmp.107, %tmp.112, %tmp.114);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 54 8 ]
+        %tmp.115 = lgetv %dc;
+        symbol [ dc %tmp.115 54 8 10 ];
+        symbol [ drawText %tmp.116 54 11 19 ];
+        %tmp.116 = getv function %tmp.115 :drawText;
+        %tmp.117 = lgetv %w.1;
+        symbol [ w %tmp.117 54 20 21 ];
+        %tmp.118 = 2;
+        %tmp.119 = div %tmp.117 %tmp.118;
+        %tmp.120 = lgetv %h.2;
+        symbol [ h %tmp.120 54 27 28 ];
+        %tmp.121 = 0.82;
+        %tmp.122 = mul %tmp.120 %tmp.121;
+        symbol [ Graphics %tmp.123 54 37 45 ];
+        %tmp.123 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.124 54 46 56 ];
+        %tmp.124 = getv %tmp.123 :FONT_XTINY;
+        %tmp.125 = "MAX SPEED";
+        symbol [ Graphics %tmp.126 54 71 79 ];
+        %tmp.126 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.127 54 80 99 ];
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.115 %tmp.116(%tmp.119, %tmp.122, %tmp.124, %tmp.125, %tmp.127);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_31_26_55_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 57; @symbol_functiondef = [getSpeedColor,57,21,34]; @symbol_param<0> = [speed,57,35,40]; ]
+    private
+    function getSpeedColor(speed) {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_57_42_62_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 58 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_8_58_43_if_stmt:
+        %tmp.1 = lgetv %speed;
+        symbol [ speed %tmp.1 58 12 17 ];
+        symbol [ v1 %tmp.3 58 20 22 ];
+        %tmp.3 = getv ? :v1;
+        %tmp.4 = lt %tmp.1 %tmp.3;
+        bf %tmp.4 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_8_58_43_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_8_58_43_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_24_58_43_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 58 26 ]
+        %tmp.5 = 0x00AAFF;
+        ret %tmp.5;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_24_58_43_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_8_58_43_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_58_8_58_43_if_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 59 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_8_59_55_if_stmt:
+        %tmp.6 = lgetv %speed;
+        symbol [ speed %tmp.6 59 12 17 ];
+        symbol [ v2 %tmp.8 59 20 22 ];
+        %tmp.8 = getv ? :v2;
+        %tmp.9 = lt %tmp.6 %tmp.8;
+        bf %tmp.9 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_8_59_55_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_8_59_55_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_24_59_55_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 59 26 ]
+        symbol [ Graphics %tmp.10 59 33 41 ];
+        %tmp.10 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.11 59 42 53 ];
+        %tmp.11 = getv %tmp.10 :COLOR_GREEN;
+        ret %tmp.11;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_24_59_55_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_8_59_55_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_59_8_59_55_if_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 60 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_8_60_56_if_stmt:
+        %tmp.12 = lgetv %speed;
+        symbol [ speed %tmp.12 60 12 17 ];
+        symbol [ v3 %tmp.14 60 20 22 ];
+        %tmp.14 = getv ? :v3;
+        %tmp.15 = lt %tmp.12 %tmp.14;
+        bf %tmp.15 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_8_60_56_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_8_60_56_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_24_60_56_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 60 26 ]
+        symbol [ Graphics %tmp.16 60 33 41 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_ORANGE %tmp.17 60 42 54 ];
+        %tmp.17 = getv %tmp.16 :COLOR_ORANGE;
+        ret %tmp.17;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_24_60_56_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_8_60_56_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_60_8_60_56_if_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc" 61 8 ]
+        symbol [ Graphics %tmp.18 61 15 23 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.19 61 24 33 ];
+        %tmp.19 = getv %tmp.18 :COLOR_RED;
+        ret %tmp.19;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewField_mc_57_42_62_4_stop:
+    }
+}
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewField.mc"; @line = 1; ]
+<init> {
+}

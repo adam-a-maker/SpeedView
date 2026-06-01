@@ -1,0 +1,18 @@
+<resources>
+    <settings>
+        <setting propertyKey="@Properties.v1" title="Seuil Vert (km/h)">
+            <settingConfig type="numeric" min="0" max="25" />
+        </setting>
+        <setting propertyKey="@Properties.v2" title="Seuil Orange (km/h)">
+            <settingConfig type="numeric" min="25" max="50" />
+        </setting>
+        <setting propertyKey="@Properties.v3" title="Seuil Rouge (km/h)">
+            <settingConfig type="numeric" min="50" max="100" />
+        </setting>
+    </settings>
+    <properties>
+        <property id="v1" type="number">20</property>
+        <property id="v2" type="number">45</property>
+        <property id="v3" type="number">70</property>
+    </properties>
+</resources>

@@ -1,0 +1,5 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">SpeedView</string>
+    <string id="label_inst">INSTANT SPEED</string>
+    <string id="label_max">MAX SPEED</string>
+</strings>
