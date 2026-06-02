@@ -1,0 +1,391 @@
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Application,3,14,25]; ]
+import Toybox.Application;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Application,4,14,25]; @symbol_importdef<2> = [Storage,4,26,33]; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Lang,5,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 7; @symbol_classdef = [SpeedViewMenuDelegate,7,6,27]; @symbol_extends<0> = [WatchUi,7,36,43]; @symbol_extends<1> = [Menu2InputDelegate,7,44,62]; ]
+class SpeedViewMenuDelegate extends WatchUi.Menu2InputDelegate {
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [_field,9,16,22]; @symbol_type<0> = [SpeedViewField,9,26,40]; ]
+    private
+    var _field as SpeedViewField;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; @symbol_param<0> = [field,11,24,29]; @symbol_param<0>_type<0> = [SpeedViewField,11,33,47]; ]
+    function initialize(field as SpeedViewField) as Void {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_11_49_14_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 12 8 ]
+        symbol [ Menu2InputDelegate %tmp.2 12 8 26 ];
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        symbol [ initialize %tmp.3 12 27 37 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 13 8 ]
+        %tmp.4 = lgetv %field;
+        symbol [ field %tmp.4 13 17 22 ];
+        symbol [ _field ? 13 8 14 ];
+        putv self :_field %tmp.4;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_11_49_14_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 16; @symbol_functiondef = [onSelect,16,13,21]; @symbol_param<0> = [item,16,22,26]; ]
+    function onSelect(item) {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 17 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %id.1 = local;
+        symbol [ id %id.1 17 12 14 ];
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 17 17 21 ];
+        symbol [ getId %tmp.2 17 22 27 ];
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %id.1 %tmp.3;
+        symbol [ id %id.1 17 12 14 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 19 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_8_23_8_if_stmt:
+        %tmp.4 = lgetv %id.1;
+        symbol [ id %tmp.4 19 12 14 ];
+        symbol [ equals %tmp.5 19 15 21 ];
+        %tmp.5 = getv function %tmp.4 :equals;
+        %tmp.6 = "reset";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        bf %tmp.7 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_8_23_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_8_23_8_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_32_23_8_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 20 12 ]
+        symbol [ _field %tmp.9 20 12 18 ];
+        %tmp.9 = getv ? :_field;
+        symbol [ resetMax %tmp.10 20 19 27 ];
+        %tmp.10 = getv function %tmp.9 :resetMax;
+        invoke %tmp.9 %tmp.10();
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 21 12 ]
+        symbol [ WatchUi %tmp.11 21 12 19 ];
+        %tmp.11 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.12 21 20 27 ];
+        %tmp.12 = getv function %tmp.11 :popView;
+        symbol [ WatchUi %tmp.13 21 28 35 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.14 21 36 46 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_DOWN;
+        invoke %tmp.11 %tmp.12(%tmp.14);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 22 12 ]
+        ret ?;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_32_23_8_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_8_23_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_19_8_23_8_if_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 25 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %min.2 = local;
+        symbol [ min %min.2 25 12 15 ];
+        %tmp.15 = 0;
+        lputv %min.2 %tmp.15;
+        symbol [ min %min.2 25 12 15 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 26 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %max.3 = local;
+        symbol [ max %max.3 26 12 15 ];
+        %tmp.16 = 25;
+        lputv %max.3 %tmp.16;
+        symbol [ max %max.3 26 12 15 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 27 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %step.4 = local;
+        symbol [ step %step.4 27 12 16 ];
+        %tmp.17 = 5;
+        lputv %step.4 %tmp.17;
+        symbol [ step %step.4 27 12 16 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 28 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %title.5 = local;
+        symbol [ title %title.5 28 12 17 ];
+        %tmp.18 = "Seuil Bleu (km/h)";
+        lputv %title.5 %tmp.18;
+        symbol [ title %title.5 28 12 17 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 30 8 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_stmt:
+        %tmp.19 = lgetv %id.1;
+        symbol [ id %tmp.19 30 12 14 ];
+        symbol [ equals %tmp.20 30 15 21 ];
+        %tmp.20 = getv function %tmp.19 :equals;
+        %tmp.21 = "v2";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        bf %tmp.22 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_false;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_29_33_8_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 31 12 ]
+        %tmp.23 = 25;
+        lputv %min.2 %tmp.23;
+        symbol [ min %min.2 31 12 15 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 31 22 ]
+        %tmp.24 = 50;
+        lputv %max.3 %tmp.24;
+        symbol [ max %max.3 31 22 25 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 31 32 ]
+        %tmp.25 = 5;
+        lputv %step.4 %tmp.25;
+        symbol [ step %step.4 31 32 36 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 32 12 ]
+        %tmp.26 = "Seuil Vert (km/h)";
+        lputv %title.5 %tmp.26;
+        symbol [ title %title.5 32 12 17 ];
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_29_33_8_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_false:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 33 15 ]
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_15_36_8_if_stmt:
+        %tmp.27 = lgetv %id.1;
+        symbol [ id %tmp.27 33 19 21 ];
+        symbol [ equals %tmp.28 33 22 28 ];
+        %tmp.28 = getv function %tmp.27 :equals;
+        %tmp.29 = "v3";
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        bf %tmp.30 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_15_36_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_15_36_8_if_true:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_36_36_8_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 34 12 ]
+        %tmp.31 = 50;
+        lputv %min.2 %tmp.31;
+        symbol [ min %min.2 34 12 15 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 34 22 ]
+        %tmp.32 = 100;
+        lputv %max.3 %tmp.32;
+        symbol [ max %max.3 34 22 25 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 34 33 ]
+        %tmp.33 = 10;
+        lputv %step.4 %tmp.33;
+        symbol [ step %step.4 34 33 37 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 35 12 ]
+        %tmp.34 = "Seuil Orange (km/h)";
+        lputv %title.5 %tmp.34;
+        symbol [ title %title.5 35 12 17 ];
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_36_36_8_stop:
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_15_36_8_if_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_33_15_36_8_if_end:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_30_8_36_8_if_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 38 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop" ]
+        %submenu.6 = local;
+        symbol [ submenu %submenu.6 38 12 19 ];
+        symbol [ WatchUi %tmp.37 38 26 33 ];
+        %tmp.37 = getm $.Toybox.WatchUi;
+        symbol [ Menu2 %tmp.38 38 34 39 ];
+        %tmp.38 = getv function ? %tmp.37 :Menu2;
+        %tmp.39 = newd 1;
+        %tmp.41 = const :title;
+        symbol [ title %tmp.41 38 43 48 const ];
+        %tmp.42 = lgetv %title.5;
+        symbol [ title %tmp.42 38 52 57 ];
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
+        %tmp.35 = newc %tmp.38 (%tmp.44);
+        lputv %submenu.6 %tmp.35;
+        symbol [ submenu %submenu.6 38 12 19 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 39 8 ]
+        for @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_test @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_incr @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_init:
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_begin" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_end" ]
+        %v.7 = local;
+        symbol [ v %v.7 39 17 18 ];
+        %tmp.45 = lgetv %min.2;
+        symbol [ min %tmp.45 39 21 24 ];
+        lputv %v.7 %tmp.45;
+        symbol [ v %v.7 39 17 18 ];
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_test:
+        %tmp.46 = lgetv %v.7;
+        symbol [ v %tmp.46 39 26 27 ];
+        %tmp.47 = lgetv %max.3;
+        symbol [ max %tmp.47 39 31 34 ];
+        %tmp.48 = lte %tmp.46 %tmp.47;
+        bf %tmp.48 @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_end;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_begin:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_47_46_8_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 40 12 ]
+        %tmp.49 = lgetv %submenu.6;
+        symbol [ submenu %tmp.49 40 12 19 ];
+        symbol [ addItem %tmp.50 40 20 27 ];
+        %tmp.50 = getv function %tmp.49 :addItem;
+        symbol [ WatchUi %tmp.53 40 32 39 ];
+        %tmp.53 = getm $.Toybox.WatchUi;
+        symbol [ MenuItem %tmp.54 40 40 48 ];
+        %tmp.54 = getv function ? %tmp.53 :MenuItem;
+        %tmp.55 = lgetv %v.7;
+        symbol [ v %tmp.55 41 16 17 ];
+        symbol [ format %tmp.56 41 18 24 ];
+        %tmp.56 = getv function %tmp.55 :format;
+        %tmp.57 = "%d";
+        %tmp.58 = invoke %tmp.55 %tmp.56(%tmp.57);
+        %tmp.59 = " km/h";
+        %tmp.60 = add %tmp.58 %tmp.59;
+        %tmp.61 = "";
+        %tmp.62 = lgetv %v.7;
+        symbol [ v %tmp.62 43 16 17 ];
+        %tmp.63 = newd 0;
+        %tmp.51 = newc %tmp.54 (%tmp.60, %tmp.61, %tmp.62, %tmp.63);
+        invoke %tmp.49 %tmp.50(%tmp.51);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_47_46_8_stop:
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_incr:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 39 ]
+        %tmp.64 = lgetv %v.7;
+        symbol [ v %tmp.64 39 36 37 ];
+        %tmp.65 = lgetv %step.4;
+        symbol [ step %tmp.65 39 41 45 ];
+        %tmp.66 = add %tmp.64 %tmp.65;
+        lputv %v.7 %tmp.66;
+        symbol [ v %v.7 39 36 37 ];
+        goto @C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_test;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_39_8_46_8_for_end:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 48 8 ]
+        symbol [ WatchUi %tmp.67 48 8 15 ];
+        %tmp.67 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.68 48 16 24 ];
+        %tmp.68 = getv function %tmp.67 :pushView;
+        %tmp.69 = lgetv %submenu.6;
+        symbol [ submenu %tmp.69 48 25 32 ];
+        symbol [ SpeedViewValueDelegate %tmp.73 49 16 38 ];
+        %tmp.73 = getv ? :SpeedViewValueDelegate;
+        symbol [ _field %tmp.75 49 39 45 ];
+        %tmp.75 = getv ? :_field;
+        %tmp.76 = lgetv %id.1;
+        symbol [ id %tmp.76 49 47 49 ];
+        %tmp.77 = as %tmp.76 String;
+        symbol [ String %tmp.77 49 53 59 ];
+        %tmp.70 = newc %tmp.73 (%tmp.75, %tmp.77);
+        symbol [ WatchUi %tmp.78 50 12 19 ];
+        %tmp.78 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.79 50 20 28 ];
+        %tmp.79 = getv %tmp.78 :SLIDE_UP;
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.79);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_16_28_51_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 53; @symbol_functiondef = [onBack,53,13,19]; ]
+    function onBack() {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_53_22_55_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 54 8 ]
+        symbol [ WatchUi %tmp.1 54 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 54 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 54 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 54 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_53_22_55_4_stop:
+    }
+}
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 60; @symbol_classdef = [SpeedViewValueDelegate,60,6,28]; @symbol_extends<0> = [WatchUi,60,37,44]; @symbol_extends<1> = [Menu2InputDelegate,60,45,63]; ]
+class SpeedViewValueDelegate extends WatchUi.Menu2InputDelegate {
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 60; ]
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 60; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 62; @position = 16; @symbol_vardef = [_field,62,16,22]; @symbol_type<0> = [SpeedViewField,62,26,40]; ]
+    private
+    var _field as SpeedViewField;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 63; @position = 16; @symbol_vardef = [_key,63,16,20]; @symbol_type<0> = [String,63,26,32]; ]
+    private
+    var _key as String;
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 65; @symbol_functiondef = [initialize,65,13,23]; @symbol_param<0> = [field,65,24,29]; @symbol_param<0>_type<0> = [SpeedViewField,65,33,47]; @symbol_param<1> = [key,65,49,52]; @symbol_param<1>_type<0> = [String,65,56,62]; ]
+    function initialize(field as SpeedViewField, key as String) as Void {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_65_64_69_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 66 8 ]
+        symbol [ Menu2InputDelegate %tmp.2 66 8 26 ];
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        symbol [ initialize %tmp.3 66 27 37 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 67 8 ]
+        %tmp.4 = lgetv %field;
+        symbol [ field %tmp.4 67 17 22 ];
+        symbol [ _field ? 67 8 14 ];
+        putv self :_field %tmp.4;
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 68 8 ]
+        %tmp.5 = lgetv %key;
+        symbol [ key %tmp.5 68 17 20 ];
+        symbol [ _key ? 68 8 12 ];
+        putv self :_key %tmp.5;
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_65_64_69_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 71; @symbol_functiondef = [onSelect,71,13,21]; @symbol_param<0> = [item,71,22,26]; ]
+    function onSelect(item) {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_71_28_77_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 72 8 ]
+        [ "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_71_28_77_4_start" "C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_71_28_77_4_stop" ]
+        %val.1 = local;
+        symbol [ val %val.1 72 12 15 ];
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 72 18 22 ];
+        symbol [ getId %tmp.2 72 23 28 ];
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %val.1 %tmp.3;
+        symbol [ val %val.1 72 12 15 ];
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 73 8 ]
+        symbol [ Storage %tmp.4 73 8 15 ];
+        %tmp.4 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.5 73 16 24 ];
+        %tmp.5 = getv function %tmp.4 :setValue;
+        symbol [ _key %tmp.7 73 25 29 ];
+        %tmp.7 = getv ? :_key;
+        %tmp.8 = lgetv %val.1;
+        symbol [ val %tmp.8 73 31 34 ];
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.8);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 74 8 ]
+        symbol [ _field %tmp.10 74 8 14 ];
+        %tmp.10 = getv ? :_field;
+        symbol [ loadSettings %tmp.11 74 15 27 ];
+        %tmp.11 = getv function %tmp.10 :loadSettings;
+        invoke %tmp.10 %tmp.11();
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 75 8 ]
+        symbol [ WatchUi %tmp.12 75 8 15 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.13 75 16 23 ];
+        %tmp.13 = getv function %tmp.12 :popView;
+        symbol [ WatchUi %tmp.14 75 24 31 ];
+        %tmp.14 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.15 75 32 42 ];
+        %tmp.15 = getv %tmp.14 :SLIDE_DOWN;
+        invoke %tmp.12 %tmp.13(%tmp.15);
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 76 8 ]
+        symbol [ WatchUi %tmp.16 76 8 15 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.17 76 16 23 ];
+        %tmp.17 = getv function %tmp.16 :popView;
+        symbol [ WatchUi %tmp.18 76 24 31 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.19 76 32 42 ];
+        %tmp.19 = getv %tmp.18 :SLIDE_DOWN;
+        invoke %tmp.16 %tmp.17(%tmp.19);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_71_28_77_4_stop:
+    }
+    [ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 79; @symbol_functiondef = [onBack,79,13,19]; ]
+    function onBack() {
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_79_22_81_4_start:
+[ "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc" 80 8 ]
+        symbol [ WatchUi %tmp.1 80 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 80 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 80 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 80 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C__Users_damab_Documents_GitHub_SpeedView_source_SpeedViewMenuDelegate_mc_79_22_81_4_stop:
+    }
+}
+[ @file = "C:\Users\damab\Documents\GitHub\SpeedView\source\SpeedViewMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

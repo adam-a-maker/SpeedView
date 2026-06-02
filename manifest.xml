@@ -1,37 +1,18 @@
 <?xml version="1.0"?>
 <iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
-    <iq:application id="541b91cf-5478-48ef-ad29-e9e2f5d53916" type="datafield" name="@Strings.AppName" entry="SpeedViewApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="3.2.0">
+    <iq:application
+        id="541b91cf-5478-48ef-ad29-e9e2f5d53916"
+        type="datafield"
+        name="@Strings.AppName"
+        entry="SpeedViewApp"
+        launcherIcon="@Drawables.LauncherIcon"
+        minApiLevel="3.2.0">
         <iq:products>
             <iq:product id="fr55"/>
         </iq:products>
-        <iq:permissions>
-            <iq:uses-permission id="DataFieldAlert"/>
-            <iq:uses-permission id="Notifications"/>
-            <iq:uses-permission id="PushNotification"/>
-            <iq:uses-permission id="Sensor"/>
-        </iq:permissions>
         <iq:languages>
             <iq:language>eng</iq:language>
         </iq:languages>
         <iq:barrels/>
-        <iq:activityFilter>
-            <iq:activity sport="Toybox.Activity.SPORT_SNOWBOARDING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_ALPINE_SKIING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_RUNNING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_CROSS_COUNTRY_SKIING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_AUTO_RACING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_E_BIKING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_FLYING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_MOTORCYCLING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_WINDSURFING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_SURFING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_SKY_DIVING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_CYCLING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_SAILING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_SWIMMING"/>
-            <iq:activity sport="Toybox.Activity.SPORT_SNOWMOBILING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_KAYAKING" subsport="Toybox.Activity.SUB_SPORT_GENERIC"/>
-            <iq:activity sport="Toybox.Activity.SPORT_ROWING"/>
-        </iq:activityFilter>
     </iq:application>
 </iq:manifest>
