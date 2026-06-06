@@ -4,7 +4,6 @@ import Toybox.WatchUi;
 
 class SpeedViewApp extends Application.AppBase {
 
-    // Référence publique pour que le delegate puisse appeler loadSettings()
     var field as SpeedViewField;
 
     function initialize() {
@@ -17,37 +16,13 @@ class SpeedViewApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {}
 
     function getInitialView() {
-        // On retourne le field + un delegate qui écoute les boutons
-        return [ field, new SpeedViewBehaviorDelegate(field) ];
+        return [ field ];
     }
 
-    // Rechargé automatiquement si settings changés depuis Connect IQ app
+    // Appelé automatiquement quand les settings changent dans l'app Connect IQ
     function onSettingsChanged() {
         field.loadSettings();
-    }
-}
-
-// BehaviorDelegate : reçoit les events boutons au niveau de la DataField view
-class SpeedViewBehaviorDelegate extends WatchUi.BehaviorDelegate {
-
-    private var _field as SpeedViewField;
-
-    function initialize(field as SpeedViewField) {
-        BehaviorDelegate.initialize();
-        _field = field;
-    }
-
-    // Bouton MENU (appui court sur UP/MENU selon la montre) → ouvre settings
-    function onMenu() {
-        _field.openSettingsMenu();
-        return true;
-    }
-
-    // Bouton SELECT (milieu) → reset max speed
-    function onSelect() {
-        _field.resetMax();
         WatchUi.requestUpdate();
-        return true;
     }
 }
 

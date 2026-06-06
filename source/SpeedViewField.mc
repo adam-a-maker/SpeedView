@@ -1,9 +1,7 @@
 import Toybox.WatchUi;
 import Toybox.Graphics;
 import Toybox.System;
-import Toybox.Math;
 import Toybox.Attention;
-import Toybox.Application;
 import Toybox.Application.Storage;
 import Toybox.Lang;
 
@@ -20,7 +18,6 @@ class SpeedViewField extends WatchUi.DataField {
         loadSettings();
     }
 
-    // Dans la classe SpeedViewField :
     function loadSettings() {
         var p1 = Storage.getValue("v1");
         var p2 = Storage.getValue("v2");
@@ -70,41 +67,6 @@ class SpeedViewField extends WatchUi.DataField {
             maxSpeed.format("%.0f"), Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(w / 2, h * 0.82, Graphics.FONT_XTINY,
             "MAX SPEED", Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    // Tactile : tap ouvre le menu
-    function onTap(location) {
-        openSettingsMenu();
-        return true;
-    }
-
-    // Boutons : appui MENU (bouton haut) ouvre le menu
-    // DataField ne reçoit pas onKey directement — voir SpeedViewApp
-    function openSettingsMenu() {
-        var menu = new WatchUi.Menu2({ :title => "SpeedView" });
-        menu.addItem(new WatchUi.MenuItem(
-            "Seuil Bleu (v1)",
-            v1.format("%.0f") + " km/h",
-            "v1", {}));
-        menu.addItem(new WatchUi.MenuItem(
-            "Seuil Vert (v2)",
-            v2.format("%.0f") + " km/h",
-            "v2", {}));
-        menu.addItem(new WatchUi.MenuItem(
-            "Seuil Orange (v3)",
-            v3.format("%.0f") + " km/h",
-            "v3", {}));
-        menu.addItem(new WatchUi.MenuItem(
-            "Reset Max",
-            maxSpeed.format("%.0f") + " km/h",
-            "reset", {}));
-        WatchUi.pushView(menu,
-            new SpeedViewMenuDelegate(self),
-            WatchUi.SLIDE_UP);
-    }
-
-    function resetMax() {
-        maxSpeed = 0.0;
     }
 
     private function getSpeedColor(speed) {
