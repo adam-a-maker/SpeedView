@@ -1,18 +1,81 @@
 <resources>
     <settings>
-        <setting propertyKey="@Properties.v1" title="Seuil Vert (km/h)">
-            <settingConfig type="numeric" min="0" max="25" />
+        <setting propertyKey="@Properties.speedUnit" title="@Strings.s_unit_title">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.unitKmh</listEntry>
+                <listEntry value="1">@Strings.unitMs</listEntry>
+                <listEntry value="2">@Strings.unitKnot</listEntry>
+                <listEntry value="3">@Strings.unitMach</listEntry>
+                <listEntry value="4">@Strings.unitMph</listEntry>
+                <listEntry value="5">@Strings.unitFts</listEntry>
+            </settingConfig>
         </setting>
-        <setting propertyKey="@Properties.v2" title="Seuil Orange (km/h)">
-            <settingConfig type="numeric" min="25" max="50" />
+        <setting propertyKey="@Properties.v1" title="@Strings.s_v1_title">
+            <settingConfig type="numeric" min="0" max="200" />
         </setting>
-        <setting propertyKey="@Properties.v3" title="Seuil Rouge (km/h)">
-            <settingConfig type="numeric" min="50" max="100" />
+        <setting propertyKey="@Properties.v2" title="@Strings.s_v2_title">
+            <settingConfig type="numeric" min="0" max="200" />
+        </setting>
+        <setting propertyKey="@Properties.v3" title="@Strings.s_v3_title">
+            <settingConfig type="numeric" min="0" max="200" />
+        </setting>
+        <setting propertyKey="@Properties.colorZone1" title="@Strings.s_cz1_title">
+            <settingConfig type="list">
+                <listEntry value="0x00AAFF">@Strings.colorCyan</listEntry>
+                <listEntry value="0x55FF55">@Strings.colorGreen</listEntry>
+                <listEntry value="0xFFA500">@Strings.colorOrange</listEntry>
+                <listEntry value="0xFF0000">@Strings.colorRed</listEntry>
+                <listEntry value="0x0000FF">@Strings.colorBlue</listEntry>
+                <listEntry value="0xFF00FF">@Strings.colorMagenta</listEntry>
+                <listEntry value="0xFFFF00">@Strings.colorYellow</listEntry>
+                <listEntry value="0xFFFFFF">@Strings.colorWhite</listEntry>
+            </settingConfig>
+        </setting>
+        <setting propertyKey="@Properties.colorZone2" title="@Strings.s_cz2_title">
+            <settingConfig type="list">
+                <listEntry value="0x00AAFF">@Strings.colorCyan</listEntry>
+                <listEntry value="0x55FF55">@Strings.colorGreen</listEntry>
+                <listEntry value="0xFFA500">@Strings.colorOrange</listEntry>
+                <listEntry value="0xFF0000">@Strings.colorRed</listEntry>
+                <listEntry value="0x0000FF">@Strings.colorBlue</listEntry>
+                <listEntry value="0xFF00FF">@Strings.colorMagenta</listEntry>
+                <listEntry value="0xFFFF00">@Strings.colorYellow</listEntry>
+                <listEntry value="0xFFFFFF">@Strings.colorWhite</listEntry>
+            </settingConfig>
+        </setting>
+        <setting propertyKey="@Properties.colorZone3" title="@Strings.s_cz3_title">
+            <settingConfig type="list">
+                <listEntry value="0x00AAFF">@Strings.colorCyan</listEntry>
+                <listEntry value="0x55FF55">@Strings.colorGreen</listEntry>
+                <listEntry value="0xFFA500">@Strings.colorOrange</listEntry>
+                <listEntry value="0xFF0000">@Strings.colorRed</listEntry>
+                <listEntry value="0x0000FF">@Strings.colorBlue</listEntry>
+                <listEntry value="0xFF00FF">@Strings.colorMagenta</listEntry>
+                <listEntry value="0xFFFF00">@Strings.colorYellow</listEntry>
+                <listEntry value="0xFFFFFF">@Strings.colorWhite</listEntry>
+            </settingConfig>
+        </setting>
+        <setting propertyKey="@Properties.colorZone4" title="@Strings.s_cz4_title">
+            <settingConfig type="list">
+                <listEntry value="0x00AAFF">@Strings.colorCyan</listEntry>
+                <listEntry value="0x55FF55">@Strings.colorGreen</listEntry>
+                <listEntry value="0xFFA500">@Strings.colorOrange</listEntry>
+                <listEntry value="0xFF0000">@Strings.colorRed</listEntry>
+                <listEntry value="0x0000FF">@Strings.colorBlue</listEntry>
+                <listEntry value="0xFF00FF">@Strings.colorMagenta</listEntry>
+                <listEntry value="0xFFFF00">@Strings.colorYellow</listEntry>
+                <listEntry value="0xFFFFFF">@Strings.colorWhite</listEntry>
+            </settingConfig>
         </setting>
     </settings>
     <properties>
-        <property id="v1" type="number">20</property>
-        <property id="v2" type="number">45</property>
+        <property id="speedUnit" type="number">0</property>
+        <property id="v1" type="number">30</property>
+        <property id="v2" type="number">50</property>
         <property id="v3" type="number">70</property>
+        <property id="colorZone1" type="number">0x00AAFF</property>
+        <property id="colorZone2" type="number">0x55FF55</property>
+        <property id="colorZone3" type="number">0xFFA500</property>
+        <property id="colorZone4" type="number">0xFF0000</property>
     </properties>
 </resources>
