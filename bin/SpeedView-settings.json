@@ -1,9 +1,42 @@
 {
   "settings" : [ {
+    "key" : "speedUnit",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "s_unit_title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "unitKmh",
+      "value" : 0
+    }, {
+      "display" : "unitMs",
+      "value" : 1
+    }, {
+      "display" : "unitKnot",
+      "value" : 2
+    }, {
+      "display" : "unitMach",
+      "value" : 3
+    }, {
+      "display" : "unitMph",
+      "value" : 4
+    }, {
+      "display" : "unitFts",
+      "value" : 5
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
     "key" : "v1",
     "valueType" : "number",
-    "defaultValue" : 20,
-    "configTitle" : "$literal0$",
+    "defaultValue" : 30,
+    "configTitle" : "s_v1_title",
     "configPrompt" : null,
     "configType" : "numeric",
     "configError" : null,
@@ -12,13 +45,13 @@
     "configRequired" : false,
     "configOptions" : null,
     "configMin" : 0,
-    "configMax" : 25,
+    "configMax" : 200,
     "configMaxLength" : null
   }, {
     "key" : "v2",
     "valueType" : "number",
-    "defaultValue" : 45,
-    "configTitle" : "$literal1$",
+    "defaultValue" : 50,
+    "configTitle" : "s_v2_title",
     "configPrompt" : null,
     "configType" : "numeric",
     "configError" : null,
@@ -26,14 +59,14 @@
     "configReadonly" : false,
     "configRequired" : false,
     "configOptions" : null,
-    "configMin" : 25,
-    "configMax" : 50,
+    "configMin" : 0,
+    "configMax" : 200,
     "configMaxLength" : null
   }, {
     "key" : "v3",
     "valueType" : "number",
     "defaultValue" : 70,
-    "configTitle" : "$literal2$",
+    "configTitle" : "s_v3_title",
     "configPrompt" : null,
     "configType" : "numeric",
     "configError" : null,
@@ -41,19 +74,194 @@
     "configReadonly" : false,
     "configRequired" : false,
     "configOptions" : null,
-    "configMin" : 50,
-    "configMax" : 100,
+    "configMin" : 0,
+    "configMax" : 200,
+    "configMaxLength" : null
+  }, {
+    "key" : "colorZone1",
+    "valueType" : "number",
+    "defaultValue" : 43775,
+    "configTitle" : "s_cz1_title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "colorCyan",
+      "value" : 43775
+    }, {
+      "display" : "colorGreen",
+      "value" : 5635925
+    }, {
+      "display" : "colorOrange",
+      "value" : 16753920
+    }, {
+      "display" : "colorRed",
+      "value" : 16711680
+    }, {
+      "display" : "colorBlue",
+      "value" : 255
+    }, {
+      "display" : "colorMagenta",
+      "value" : 16711935
+    }, {
+      "display" : "colorYellow",
+      "value" : 16776960
+    }, {
+      "display" : "colorWhite",
+      "value" : 16777215
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "colorZone2",
+    "valueType" : "number",
+    "defaultValue" : 5635925,
+    "configTitle" : "s_cz2_title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "colorCyan",
+      "value" : 43775
+    }, {
+      "display" : "colorGreen",
+      "value" : 5635925
+    }, {
+      "display" : "colorOrange",
+      "value" : 16753920
+    }, {
+      "display" : "colorRed",
+      "value" : 16711680
+    }, {
+      "display" : "colorBlue",
+      "value" : 255
+    }, {
+      "display" : "colorMagenta",
+      "value" : 16711935
+    }, {
+      "display" : "colorYellow",
+      "value" : 16776960
+    }, {
+      "display" : "colorWhite",
+      "value" : 16777215
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "colorZone3",
+    "valueType" : "number",
+    "defaultValue" : 16753920,
+    "configTitle" : "s_cz3_title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "colorCyan",
+      "value" : 43775
+    }, {
+      "display" : "colorGreen",
+      "value" : 5635925
+    }, {
+      "display" : "colorOrange",
+      "value" : 16753920
+    }, {
+      "display" : "colorRed",
+      "value" : 16711680
+    }, {
+      "display" : "colorBlue",
+      "value" : 255
+    }, {
+      "display" : "colorMagenta",
+      "value" : 16711935
+    }, {
+      "display" : "colorYellow",
+      "value" : 16776960
+    }, {
+      "display" : "colorWhite",
+      "value" : 16777215
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "colorZone4",
+    "valueType" : "number",
+    "defaultValue" : 16711680,
+    "configTitle" : "s_cz4_title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "colorCyan",
+      "value" : 43775
+    }, {
+      "display" : "colorGreen",
+      "value" : 5635925
+    }, {
+      "display" : "colorOrange",
+      "value" : 16753920
+    }, {
+      "display" : "colorRed",
+      "value" : 16711680
+    }, {
+      "display" : "colorBlue",
+      "value" : 255
+    }, {
+      "display" : "colorMagenta",
+      "value" : 16711935
+    }, {
+      "display" : "colorYellow",
+      "value" : 16776960
+    }, {
+      "display" : "colorWhite",
+      "value" : 16777215
+    } ],
+    "configMin" : null,
+    "configMax" : null,
     "configMaxLength" : null
   } ],
   "supportsLiveValidation" : false,
   "languages" : {
     "valyrian" : {
-      "label_inst" : "INSTANT SPEED",
-      "$literal1$" : "Seuil Orange (km/h)",
-      "$literal0$" : "Seuil Vert (km/h)",
+      "s_cz2_title" : "Color Zone 2",
+      "colorYellow" : "Yellow",
+      "unitKmh" : "km/h",
+      "AppName" : "SpeedView",
+      "s_v1_title" : "Threshold 1",
       "label_max" : "MAX SPEED",
-      "$literal2$" : "Seuil Rouge (km/h)",
-      "AppName" : "SpeedView"
+      "s_cz4_title" : "Color Zone 4",
+      "unitMach" : "Mach",
+      "colorBlue" : "Blue",
+      "label_inst" : "INSTANT SPEED",
+      "s_v3_title" : "Threshold 3",
+      "s_cz1_title" : "Color Zone 1",
+      "colorOrange" : "Orange",
+      "unitKnot" : "knot",
+      "unitMph" : "mph",
+      "unitFts" : "ft/s",
+      "colorRed" : "Red",
+      "s_unit_title" : "Speed Unit",
+      "colorGreen" : "Green",
+      "unitMs" : "m/s",
+      "colorCyan" : "Cyan",
+      "colorMagenta" : "Magenta",
+      "colorWhite" : "White",
+      "s_v2_title" : "Threshold 2",
+      "s_cz3_title" : "Color Zone 3"
     }
   }
 }

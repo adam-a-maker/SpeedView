@@ -2,4 +2,26 @@
     <string id="AppName">SpeedView</string>
     <string id="label_inst">INSTANT SPEED</string>
     <string id="label_max">MAX SPEED</string>
+    <string id="s_unit_title">Speed Unit</string>
+    <string id="unitKmh">km/h</string>
+    <string id="unitMs">m/s</string>
+    <string id="unitKnot">knot</string>
+    <string id="unitMach">Mach</string>
+    <string id="unitMph">mph</string>
+    <string id="unitFts">ft/s</string>
+    <string id="s_v1_title">Threshold 1</string>
+    <string id="s_v2_title">Threshold 2</string>
+    <string id="s_v3_title">Threshold 3</string>
+    <string id="s_cz1_title">Color Zone 1</string>
+    <string id="s_cz2_title">Color Zone 2</string>
+    <string id="s_cz3_title">Color Zone 3</string>
+    <string id="s_cz4_title">Color Zone 4</string>
+    <string id="colorCyan">Cyan</string>
+    <string id="colorBlue">Blue</string>
+    <string id="colorGreen">Green</string>
+    <string id="colorYellow">Yellow</string>
+    <string id="colorRed">Red</string>
+    <string id="colorMagenta">Magenta</string>
+    <string id="colorOrange">Orange</string>
+    <string id="colorWhite">White</string>
 </strings>

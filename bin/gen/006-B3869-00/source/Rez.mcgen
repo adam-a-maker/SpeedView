@@ -10,9 +10,31 @@ module Rez {
     } // Drawables
 
     module Strings {
-        (:initialized) var label_max as ResourceId;
-        (:initialized) var label_inst as ResourceId;
+        (:initialized) var s_cz2_title as ResourceId;
+        (:initialized) var colorYellow as ResourceId;
+        (:initialized) var unitKmh as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var s_v1_title as ResourceId;
+        (:initialized) var label_max as ResourceId;
+        (:initialized) var s_cz4_title as ResourceId;
+        (:initialized) var unitMach as ResourceId;
+        (:initialized) var colorBlue as ResourceId;
+        (:initialized) var label_inst as ResourceId;
+        (:initialized) var s_v3_title as ResourceId;
+        (:initialized) var s_cz1_title as ResourceId;
+        (:initialized) var colorOrange as ResourceId;
+        (:initialized) var unitKnot as ResourceId;
+        (:initialized) var unitMph as ResourceId;
+        (:initialized) var unitFts as ResourceId;
+        (:initialized) var colorRed as ResourceId;
+        (:initialized) var s_unit_title as ResourceId;
+        (:initialized) var colorGreen as ResourceId;
+        (:initialized) var unitMs as ResourceId;
+        (:initialized) var colorCyan as ResourceId;
+        (:initialized) var colorMagenta as ResourceId;
+        (:initialized) var colorWhite as ResourceId;
+        (:initialized) var s_v2_title as ResourceId;
+        (:initialized) var s_cz3_title as ResourceId;
     } // Strings
 
     module Styles {
